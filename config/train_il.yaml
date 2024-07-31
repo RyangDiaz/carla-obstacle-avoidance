@@ -1,0 +1,19 @@
+defaults:
+  # - agent: cilrs
+  # - agent/cilrs/policy: dagger
+  # - agent/cilrs/training: dagger
+  # - agent/cilrs/obs_configs: central_rgb_bboxes
+  - agent: cilrs_bbox
+  - agent/cilrs_bbox/policy: dagger
+  - agent/cilrs_bbox/training: dagger
+  - agent/cilrs_bbox/obs_configs: central_rgb_bboxes
+train_epochs: 25
+seed: 2021
+wb_project: debug_cilrs
+wb_name: null
+wb_notes: null
+wb_tags: null
+wb_group: null
+dagger_datasets: []
+cache_dir: null
+reset_step: false

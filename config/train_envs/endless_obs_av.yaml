@@ -1,0 +1,42 @@
+# - env_id: Endless-v0
+#   env_configs:
+#     carla_map: Town01
+#     num_zombie_vehicles: [60, 70]
+#     num_zombie_walkers: [50, 60]
+#     weather_group: train
+#   gpu: [0]
+# - env_id: Endless-v0
+#   env_configs:
+#     carla_map: Town02
+#     num_zombie_vehicles: [60, 70]
+#     num_zombie_walkers: [50, 60]
+#     weather_group: train
+#   gpu: [0]
+- env_id: Endless-v0
+  env_configs:
+    carla_map: Town03
+    num_zombie_vehicles: [90, 100]
+    num_zombie_walkers: [50, 60]
+    weather_group: train
+  gpu: [0]
+- env_id: Endless-v0
+  env_configs:
+    carla_map: Town03
+    num_zombie_vehicles: [90, 100]
+    num_zombie_walkers: [50, 60]
+    weather_group: train
+  gpu: [0]
+- env_id: Endless-v0
+  env_configs:
+    carla_map: Town04
+    num_zombie_vehicles: [90, 100]
+    num_zombie_walkers: [40, 50]
+    weather_group: train
+  gpu: [1]
+- env_id: Endless-v0
+  env_configs:
+    carla_map: Town04
+    num_zombie_vehicles: [90, 100]
+    num_zombie_walkers: [40, 50]
+    weather_group: train
+  gpu: [1]

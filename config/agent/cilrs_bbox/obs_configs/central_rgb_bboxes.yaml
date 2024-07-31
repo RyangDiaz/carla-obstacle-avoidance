@@ -1,0 +1,37 @@
+speed:
+  module: actor_state.speed
+gnss:
+  module: navigation.gnss
+central_rgb:
+  module: camera.rgb
+  fov: 90
+  width: 512 # 640
+  height: 256 # 360
+  location: [1.0, 0.0, 1.5]
+  rotation: [0.0, -5.0, 0.0] # [0.0, 0.0, 0.0]
+route_plan:
+  module: navigation.waypoint_plan
+  steps: 20
+birdview:
+  module: birdview.chauffeurnet
+  width_in_pixels: 192
+  pixels_ev_to_bottom: 40
+  pixels_per_meter: 5.0
+  history_idx: [-16, -11, -6, -1]
+  scale_bbox: false
+bbox:
+  module: bounding_boxes.bbox_yolo
+  model_path: '/home/diaz0329/REU/carla-roach/carla_gym/core/obs_manager/bounding_boxes/models/best.pt'
+  imgsz: 512
+  conf: 0.6
+  max_detection_number: 10
+  camera_fov: 45
+  camera_width: 512
+  camera_height: 256
+  camera_location: [1.0, 0.0, 1.5]
+  camera_rotation: [0.0, -5.0, 0.0] # [0.0, 0.0, 0.0]
+lanes:
+  module: lane_detection.lanenet
+  model_path: /home/diaz0329/REU/carla-roach/carla_gym/core/obs_manager/lane_detection/lanenet_lane_detection_pytorch/log/loss=0.1223_miou=0.5764_epoch=73.pth
+  camera_location: [1.0, 0.0, 1.5] # [0.5, 0.0, 1.3]
+  camera_rotation: [0.0, -5.0, 0.0] # [0.0, -5.0, 0.0]

@@ -1,0 +1,18 @@
+- env_id: SimpleRoute-v0
+  env_configs:
+    carla_map: Town03
+    routes_group: null
+    weather_group: train
+  gpu: [0]
+- env_id: SimpleRoute-v0
+  env_configs:
+    carla_map: Town03
+    routes_group: null
+    weather_group: train
+  gpu: [0]
+- env_id: SimpleRoute-v0
+  env_configs:
+    carla_map: Town03
+    routes_group: null
+    weather_group: train
+  gpu: [1]
