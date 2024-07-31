@@ -2,25 +2,25 @@
 
 # NOTE: Make sure to comment out the benchmark function of the agent that you are NOT benchmarking
 
-# # ============= Evaluating trained reinforcement learning agent =============
-# # You will need to set the following parameters to their appropriate values before starting the evaluation process: 
-# #     agent.ppo.wb_run_path = [WANDB RUN ID OF TRAINED RL MODEL]
-# # NOTE: To use the pretrained RL model from the original Roach paper:
-# # agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0
-# agent="ppo"
-# benchmark () {
-#   python -u benchmark.py resume=true log_video=true \
-#   wb_project=obs_av_benchmark \
-#   agent=$agent actors.hero.agent=$agent \
-#   agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
-#   'wb_group="Roach"' \
-#   'wb_notes="Benchmark Roach on NoCrash-dense."' \
-#   test_suites=static_test \
-#   seed=2021 \
-#   +wb_sub_group=nocrash_dense \
-#   no_rendering=true \
-#   carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
-# }
+# ============= Evaluating trained reinforcement learning agent =============
+# You will need to set the following parameters to their appropriate values before starting the evaluation process: 
+#     agent.ppo.wb_run_path = [WANDB RUN ID OF TRAINED RL MODEL]
+# NOTE: To use the pretrained RL model from the original Roach paper:
+# agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0
+agent="ppo"
+benchmark () {
+  python -u benchmark.py resume=true log_video=true \
+  wb_project=obs_av_benchmark \
+  agent=$agent actors.hero.agent=$agent \
+  agent.ppo.wb_run_path=iccv21-roach/trained-models/1929isj0 \
+  'wb_group="Roach"' \
+  'wb_notes="Benchmark Roach on NoCrash-dense."' \
+  test_suites=static_test \
+  seed=2021 \
+  +wb_sub_group=nocrash_dense \
+  no_rendering=true \
+  carla_sh_path=${CARLA_ROOT}/CarlaUE4.sh
+}
 
 # ============= Evaluating trained imitation learning agent =============
 # You will need to set the following parameters to their appropriate values before starting the evaluation process: 
@@ -30,7 +30,7 @@ benchmark () {
   python -u benchmark.py resume=true log_video=true \
   wb_project=obs_av_benchmark \
   agent=$agent actors.hero.agent=$agent \
-  agent.cilrs_bbox.wb_run_path=diaz0329/simple_env_obs_av/149b7elx \
+  agent.cilrs_bbox.wb_run_path=diaz0329/simple_env_obs_av/lska0g6x \
   'wb_group="L_K+L_F(c)"' \
   'wb_notes="Benchmark L_K+L_F(c) on NoCrash-dense."' \
   test_suites=simple_route \
