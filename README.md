@@ -135,7 +135,7 @@ In this folder, you will find two important files related to the behavior of the
 
 ### carla_gym/envs
 
-This folder contains the code for handling the environments for the training and rollout of the RL and IL agents. The base environment code is in `envs/carla_multi_agent_env.py`, with more specific environments inhering from the `CarlaMultiAgentEnv` class. In particular, RL training is done in the "EndlessEnv" (`envs/suites/endless_env.py`) and IL training is done in the "SimpleRouteEnv" (`envs/suites/simple_route_env.py`). If you are looking to test specific routes in a map, you can specify them in the `envs/scenario_descriptions` folder (refer to the SimpleRouteEnv as an example).
+This folder contains the code for handling the environments for the training and rollout of the RL and IL agents. The base environment code is in `envs/carla_multi_agent_env.py`, with more specific environments inheriting from the `CarlaMultiAgentEnv` class. In particular, RL training is done in the "EndlessEnv" (`envs/suites/endless_env.py`) and IL training is done in the "SimpleRouteEnv" (`envs/suites/simple_route_env.py`). If you are looking to test specific routes in a map, you can specify them in the `envs/scenario_descriptions` folder (refer to the SimpleRouteEnv as an example).
 
 ## References
 
