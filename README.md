@@ -45,7 +45,7 @@ Roach has a fairly robust training system that makes frequent use of the logging
 The training pipeline consists of 6 steps, and is meant to guide one through the process of learning behaviors through knowledge distillation:
 
 1. Training an expert RL agent using bird's eye view data to follow routes and obey traffic rules.
-2. Collecting demonstrations from the trained RL agent.
+2. Collecting demonstrations from the trained RL agent that involves the avoidance of static obstacles.
 3. Training an IL agent using data from windshield RGB images to follow routes, obey traffic rules, and avoid static obstacles.
 4. Evaluating the trained IL agent.
 5. Collecting additional demonstrations from the IL agent for further imitation learning using the DAgger algorithm.
