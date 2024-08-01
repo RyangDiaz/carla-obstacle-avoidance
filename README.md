@@ -4,7 +4,7 @@
 
 Ryan Diaz (diaz0329@umn.edu) (advised by Yevgeniy Vorobeychik (yvorobeychik@wustl.edu))
 
-This is a codebase representing my work done over the course of the Summer 2024 CSE REU program at Washington University in St. Louis. Specifically, it handles training a vision-based static obstacle avoidance agent using knowledge distillation between a privileged RL agent and a visuomotor IL agent in the CARLA simulation. This repository originally started off as a fork of the repository for the paper [End-to-End Urban Driving by Imitating a Reinforcement Learning Coach (Roach)](https://arxiv.org/abs/2108.08265). This paper constitutes the main foundation of my method and heavily inspired a lot of my ideas.
+This is a codebase representing my work done over the course of the Summer 2024 CSE REU program at Washington University in St. Louis. Specifically, it handles training a vision-based static obstacle avoidance agent using knowledge distillation between a privileged RL agent and a visuomotor IL agent in the CARLA [1] simulation. This repository originally started off as a fork of the repository for the paper [End-to-End Urban Driving by Imitating a Reinforcement Learning Coach (Roach)](https://arxiv.org/abs/2108.08265) [2]. This paper constitutes the main foundation of my method and heavily inspired a lot of my ideas.
 
 ## Resources
 
@@ -136,3 +136,9 @@ In this folder, you will find two important files related to the behavior of the
 ### carla_gym/envs
 
 This folder contains the code for handling the environments for the training and rollout of the RL and IL agents. The base environment code is in `envs/carla_multi_agent_env.py`, with more specific environments inhering from the `CarlaMultiAgentEnv` class. In particular, RL training is done in the "EndlessEnv" (`envs/suites/endless_env.py`) and IL training is done in the "SimpleRouteEnv" (`envs/suites/simple_route_env.py`). If you are looking to test specific routes in a map, you can specify them in the `envs/scenario_descriptions` folder (refer to the SimpleRouteEnv as an example).
+
+## References
+
+[1] A. Dosovitskiy, G. Ros, F. Codevilla, A. Lopez, and V. Koltun, “CARLA: An open urban driving simulator,” in Proceedings of the 1st Annual Conference on Robot Learning, ser. Proceedings of Machine Learning Research, S. Levine, V. Vanhoucke, and K. Goldberg, Eds., vol. 78. PMLR, 13-15 Nov 2017, pp. 1-16.
+
+[2] Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, “End-to-end urban driving by imitating a reinforcement learning coach,” in Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
