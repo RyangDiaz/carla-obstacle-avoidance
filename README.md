@@ -4,7 +4,7 @@
 
 Ryan Diaz (diaz0329@umn.edu) (advised by Yevgeniy Vorobeychik (yvorobeychik@wustl.edu))
 
-This is a codebase representing my work done over the course of the Summer 2024 CSE REU program at Washington University in St. Louis. Specifically, it handles training a vision-based static obstacle avoidance agent using knowledge distillation between a privileged RL agent and a visuomotor IL agent in the CARLA [1] simulation. This repository originally started off as a fork of the repository for the paper [End-to-End Urban Driving by Imitating a Reinforcement Learning Coach (Roach)](https://arxiv.org/abs/2108.08265) [2]. This paper constitutes the main foundation of my method and heavily inspired a lot of my ideas.
+This is a codebase representing my work done over the course of the Summer 2024 CSE REU program at Washington University in St. Louis. Specifically, it handles training a vision-based static obstacle avoidance agent using knowledge distillation between a privileged RL agent and a visuomotor IL agent in the CARLA [1] simulation (the other repository I worked on that focused on obstacle detection in CARLA can be found [here](https://github.com/RyangDiaz/carla-yolo-dataset-generator)). This repository originally started off as a fork of the repository for the paper [End-to-End Urban Driving by Imitating a Reinforcement Learning Coach (Roach)](https://arxiv.org/abs/2108.08265) [2]. This paper constitutes the main foundation of my method and heavily inspired a lot of my ideas.
 
 ## Resources
 
@@ -111,7 +111,7 @@ You will need to modify `data_collect_dagger.sh` to take in the appropriate argu
 
 ## Codebase Overview
 
-Below is a description of important files and folders to keep in mind if you are looking to make changes to the existing algorithm
+Below is a description of important files and folders to keep in mind if you are looking to make changes to the existing algorithm.
 
 ### agents/cilrs_bbox and agents/rl_birdview
 
