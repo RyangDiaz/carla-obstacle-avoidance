@@ -118,13 +118,12 @@ Below is a description of important files and folders to keep in mind if you are
 These folders contain the code for training and running both the expert reinforcement learning policy and the visuomotor imitation learning policy. Both folders have a similar structure: `*_agent.py` handles model loading and calling the apporpriate functions for input processing and training. `*_wrapper.py` handles the actual preprocessing of observations before being fed into the policy as well as handling the debugging visualizations. `rl_birdview/ppo_policy.py` and `cilrs_bbox/models/cilrs_model.py` contain the code for the actual observation to action translation within the policy, including observation encoding and action decoding. 
 
 ### carla_gym/core
-
 **`carla_gym/core/obs_manager`**
 
 This folder contains all the logic for handling all of the incoming input modalities for our policies from the CARLA simulation. If you wanted to add in a new input modality (such as semantic segmentation), you should do so here. Follow the template provided in the existing inputs to get a good sense of how the data should interact with the rest of the codebase. Once you have implemented your new input modality, be sure to update the config files in `config/agent/cilrs_bbox/obs_configs` and/or `config/agent/ppo/obs_configs` to include the new data.
 
 If this new data is to be collected in demonstration as input to the imitation learning policy, you will also need to modify the `write()` function in `utils/saving_utils.py` to explicitly record your data.
-
+---
 **`carla_gym/core/task_actor`**
 
 In this folder, you will find two important files related to the behavior of the vehicle in the simulation:
