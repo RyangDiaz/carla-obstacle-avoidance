@@ -12,7 +12,7 @@ This is a codebase representing my work done over the course of the Summer 2024 
 
 - For a more comprehensive view of the Roach repository code, please refer to the original repository [here](https://github.com/zhejz/carla-roach).
 
-- For a full documentation of the project, including a description of the methods and suggested future directions, please refer to this document (TODO).
+- For a full documentation of the project, including a description of the methods and suggested future directions, please refer to [this](REU_Summer_2024_Project_Documentation.pdf) document.
 
 ## Setup
 
